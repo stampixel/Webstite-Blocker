@@ -1,5 +1,4 @@
 import time
-import winsound
 
 
 def write_list_to_file(file_path, content):
@@ -14,11 +13,11 @@ def read_file_to_list(file_path):
     return [line.strip() for line in content]
 
 
-blocked_path = "blocked_sites"
+blocked_path = "blocked_sites.txt"
 blocked_websites = read_file_to_list(blocked_path)
 hosts_path = r"/private/etc/hosts"
 
-timer_path = "timer"
+timer_path = "timer.txt"
 time_minutes = read_file_to_list(timer_path)
 
 with open(hosts_path, "a") as file:
